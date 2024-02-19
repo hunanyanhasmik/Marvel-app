@@ -3,7 +3,6 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom/cjs/rea
 import AppHeader from "../appHeader/AppHeader";
 import { MainPage, ComicsPage } from "../pages";
 
-
 const App = () => {
     return (
         <Router>
