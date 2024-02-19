@@ -1,0 +1,101 @@
+@import "../../style/fonts.scss"; 
+@import "../../style/global.scss"; 
+@import "../../style/variables.scss"; 
+
+header {
+    .container {
+        .header__content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 48px;
+
+            .title {
+                font-weight: 700;
+                font-size: 28px;
+                line-height: 33px;
+
+                span {
+                    color: $primary;
+                }
+            }
+            .menu {
+                list-style-type: none;
+                display: flex;
+                align-items: center;
+
+                li {
+                    font-weight: 700;
+                    font-size: 24px;
+                    line-height: 28px;
+                }
+
+                .menu__item {
+                    font-family: 'Roboto Condensed';
+                    color: $primary;
+                }
+                span {
+                    margin: 0 8px;
+                }
+                .sub-menu__item {
+                    position: relative;
+                    color: $black;
+                }
+            }
+        }
+
+        .header__banner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: $bgColor;
+            margin-top: 38px;
+
+            .header__banner__left {
+                display: flex;
+                gap: 80px;
+                padding-left: 45px;
+
+                img {
+                    object-fit: cover;
+                }
+
+                .header__banner__title {
+                    font-weight: 700;
+                    font-size: 24px;
+                    line-height: 28px;
+                    color: $white;
+                }
+            }
+            .header__banner__right {
+                padding-right: 25px;
+            }
+        }
+        @media screen and (max-width: $tablet) {
+            padding: 0 32px;
+        }
+        @media screen and (max-width: $mobileM) {
+            .header__banner {
+                align-items: flex-start;
+                .header__banner__left {
+                    gap: 0;
+                    flex-wrap: wrap;
+                    padding-left: 28px;
+                }
+            }
+        }
+        @media screen and (max-width: $mobileS) {
+            .header__content {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+        }
+        @media screen and (max-width: $mobileXS) {
+            .header__content {
+                .title {
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
